@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+body {
+  background-color: #fcf9f8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glass-nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.gradient-bg {
+  background: linear-gradient(180deg, #dcd6ff 0%, #fcd3b7 100%);
+}
+
+.bg-onboarding-gradient {
+  background: linear-gradient(135deg, #fcf9f8 0%, #f0eded 50%, #dcd6ff 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.bg-soft-gradient {
+  background: linear-gradient(180deg, #fcf9f8 0%, #f0ebff 100%);
+}
+
+.glass-effect {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.donut-chart {
+  background: conic-gradient(
+    #5e5a7d 0% 35%,
+    #356851 35% 55%,
+    #765842 55% 70%,
+    #e4e2e1 70% 100%
+  );
+  border-radius: 50%;
+}
+
+/* Typing dots animation */
+@keyframes typing-bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+}
+.typing-dot:nth-child(1) { animation: typing-bounce 1.4s infinite 0s; }
+.typing-dot:nth-child(2) { animation: typing-bounce 1.4s infinite 0.2s; }
+.typing-dot:nth-child(3) { animation: typing-bounce 1.4s infinite 0.4s; }
+
+/* Shimmer loading animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #f0eded 25%, #e4dfff 50%, #f0eded 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
